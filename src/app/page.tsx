@@ -15,12 +15,12 @@ export default function Home() {
               {" "}
               {/* Container for image */}
               <Image
-                src="/profile.jpg" // Explicitly include basePath
+                // src="/profile/profile.jpg" // Explicitly include basePath
+                src="/profile.jpg" // Path relative to the public directory
                 alt="Profile Picture"
-                width={160} // Add width and height for non-fill layout
-                height={160}
-                className="absolute inset-0 w-full h-full object-cover rounded-full border-4 border-white dark:border-slate-700 shadow-lg transform transition-transform duration-300 hover:scale-105"
-                priority // Load image faster
+                width={150} // Add width
+                height={150} // Add height
+                className="rounded-full mb-4"
               />
             </div>
           </div>
