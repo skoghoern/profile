@@ -16,7 +16,7 @@ export default function Home() {
               {/* Container for image */}
               <Image
                 // src="/profile/profile.jpg" // Explicitly include basePath
-                src="/profile.jpg" // Path relative to the public directory
+                src="/profile/profile.jpg" // Path relative to the public directory
                 alt="Profile Picture"
                 width={150} // Add width
                 height={150} // Add height
