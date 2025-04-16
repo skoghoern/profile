@@ -72,8 +72,8 @@ export default function Home() {
                 </h1>
 
                 <p className="mb-6 text-slate-600 dark:text-slate-300 text-center">
-                  Hi, I'm Ben! My goal is to understand intelligence, cognition
-                  and the mind.
+                  Hi, I&apos;m Ben! My goal is to understand intelligence,
+                  cognition and the mind.
                 </p>
                 {/* Existing Bio Section */}
                 <div className="border-t border-slate-200 dark:border-slate-700 pt-6 mt-6 text-center">
@@ -84,15 +84,15 @@ export default function Home() {
                   </h3>
                   <p className="text-slate-600 dark:text-slate-300">
                     My core passion lies at the intersection of the brain,
-                    mathematics, and code. I'm deeply curious about unraveling
-                    the mathematical principles that govern how our minds work.
-                    My goal is not just theoretical understanding, but also
-                    translating these principles into tangible code, aiming to
-                    simulate aspects of human cognition. My background spans
-                    medicine, neurobiology, and cognitive science, complemented
-                    by a keen interest in mathematics and psychology, all
-                    driving my quest to understand the blueprint of
-                    intelligence.
+                    mathematics, and code. I&apos;m deeply curious about
+                    unraveling the mathematical principles that govern how our
+                    minds work. My goal is not just theoretical understanding,
+                    but also translating these principles into tangible code,
+                    aiming to simulate aspects of human cognition. My background
+                    spans medicine, neurobiology, and cognitive science,
+                    complemented by a keen interest in mathematics and
+                    psychology, all driving my quest to understand the blueprint
+                    of intelligence.
                   </p>
                 </div>
               </section>
@@ -106,7 +106,7 @@ export default function Home() {
                   Projects
                 </h2>
                 <p className="mb-4 text-slate-600 dark:text-slate-300 text-center">
-                  Here's an overview of some things I've worked on.
+                  Here&apos;s an overview of some things I&apos;ve worked on.
                 </p>
 
                 {/* Project Example 1: Marimo Notebook */}
