@@ -15,7 +15,7 @@ export default function Home() {
               {" "}
               {/* Container for image */}
               <Image
-                src="/profile/profile.jpg" // Explicitly include basePath
+                src="/profile.jpg" // Explicitly include basePath
                 alt="Profile Picture"
                 width={160} // Add width and height for non-fill layout
                 height={160}
