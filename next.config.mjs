@@ -2,7 +2,7 @@
 const nextConfig = {
   output: "export", // Re-enable for build
   basePath: "/profile",
-  //assetPrefix: "/profile/",
+  assetPrefix: "/profile/",
   images: {
     unoptimized: true,
   },
