@@ -149,7 +149,54 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Add more project sections as needed */}
+                {/* Publications Section */}
+                <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700">
+                  <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-slate-200 text-center">
+                    Publications
+                  </h3>
+                  {/* Paper 1 */}
+                  <div className="mb-6 p-4 border border-slate-200 dark:border-slate-700 rounded-md bg-slate-50 dark:bg-slate-800/50">
+                    <h4 className="text-lg font-semibold mb-2 text-slate-700 dark:text-slate-300">
+                      Expression of Lineage Transcription Factors Identifies
+                      Differences in Transition States of Induced Human
+                      Oligodendrocyte Differentiation
+                    </h4>
+                    <p className="text-slate-600 dark:text-slate-400 mb-3">
+                      Published in{" "}
+                      <a
+                        href="https://www.mdpi.com/2073-4409/11/2/241"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 dark:text-blue-400 hover:underline italic"
+                      >
+                        Cells
+                      </a>
+                      , 2022.
+                    </p>
+                    <a
+                      href="https://www.mdpi.com/2073-4409/11/2/241"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                    >
+                      View Publication
+                    </a>
+                  </div>
+                  {/* Paper 2 */}
+                  <div className="mb-6 p-4 border border-slate-200 dark:border-slate-700 rounded-md bg-slate-50 dark:bg-slate-800/50">
+                    <h4 className="text-lg font-semibold mb-2 text-slate-700 dark:text-slate-300">
+                      iPSC-modelling reveals genetic associations and
+                      morphological alterations of oligodendrocytes in
+                      schizophrenia
+                    </h4>
+                    <p className="text-slate-600 dark:text-slate-400">
+                      Accepted by{" "}
+                      <span className="italic">Translational Psychiatry</span>{" "}
+                      (April 23, 2025). {/* Adjusted date format */}
+                    </p>
+                    {/* No link yet as it's accepted but not published */}
+                  </div>
+                </div>
               </section>
             )}
           </div>
