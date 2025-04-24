@@ -109,48 +109,8 @@ export default function Home() {
                   Here&apos;s an overview of some things I&apos;ve worked on.
                 </p>
 
-                {/* Project Example 1: Marimo Notebook */}
-                <div className="mb-6 p-4 border border-slate-200 dark:border-slate-700 rounded-md bg-slate-50 dark:bg-slate-800/50">
-                  <h3 className="text-lg font-semibold mb-2 text-slate-700 dark:text-slate-300">
-                    Visual Introduction to Active Inference
-                  </h3>
-                  <p className="text-slate-600 dark:text-slate-400 mb-3">
-                    An introduction to programming active inference agents in
-                    python with the pymdp package. Explore the concepts visually
-                    and interactively.
-                  </p>
-                  <a
-                    href="https://skoghoern.github.io/notebooks/visual-intro_active-inference.html" // Updated link
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
-                  >
-                    View Marimo Notebook
-                  </a>
-                </div>
-
-                {/* Project Example 2: Active Inference GIF */}
-                <div className="mb-6 p-4 border border-slate-200 dark:border-slate-700 rounded-md bg-slate-50 dark:bg-slate-800/50">
-                  <h3 className="text-lg font-semibold mb-2 text-slate-700 dark:text-slate-300">
-                    Active Inference Loop
-                  </h3>
-                  <p className="text-slate-600 dark:text-slate-400 mb-3">
-                    A brief visual explanation of the active inference concept.
-                  </p>
-                  <div className="flex justify-center my-4">
-                    <Image
-                      src="/profile/ActiveInferenceLoop.gif" // Assumes GIF is in public/profile
-                      alt="Active Inference Loop GIF"
-                      width={300} // Base width
-                      height={200} // Base height
-                      unoptimized={true} // Important for GIFs in Next.js Image component
-                      className="rounded w-64 h-auto md:w-80 lg:w-96" // Responsive width classes, auto height
-                    />
-                  </div>
-                </div>
-
-                {/* Publications Section */}
-                <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700">
+                {/* Publications Section - MOVED HERE */}
+                <div className="mb-8 pt-6 border-t border-slate-200 dark:border-slate-700">
                   <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-slate-200 text-center">
                     Publications
                   </h3>
@@ -195,6 +155,76 @@ export default function Home() {
                       (April 23, 2025). {/* Adjusted date format */}
                     </p>
                     {/* No link yet as it's accepted but not published */}
+                  </div>
+                </div>
+
+                {/* Other Projects Section - ADDED WRAPPER */}
+                <div className="pt-6 border-t border-slate-200 dark:border-slate-700">
+                  <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-slate-200 text-center">
+                    Other Projects
+                  </h3>
+                  {/* Project Example: Psychotherapy App */}
+                  <div className="mb-6 p-4 border border-slate-200 dark:border-slate-700 rounded-md bg-slate-50 dark:bg-slate-800/50">
+                    <h3 className="text-lg font-semibold mb-2 text-slate-700 dark:text-slate-300">
+                      Psychotherapy Support App (Mindly)
+                    </h3>
+                    <p className="text-slate-600 dark:text-slate-400 mb-3">
+                      A web application designed to help users understand and
+                      manage their emotions and thoughts using the ABC model
+                      from Cognitive Behavioral Therapy (CBT). It guides users
+                      through identifying an Activating event (A), their Beliefs
+                      (B) about the event, and the emotional/behavioral
+                      Consequences (C).
+                    </p>
+                    <a
+                      href="https://mindly-mindly.web.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                    >
+                      Visit Mindly App
+                    </a>
+                  </div>
+
+                  {/* Project Example 1: Marimo Notebook */}
+                  <div className="mb-6 p-4 border border-slate-200 dark:border-slate-700 rounded-md bg-slate-50 dark:bg-slate-800/50">
+                    <h3 className="text-lg font-semibold mb-2 text-slate-700 dark:text-slate-300">
+                      Visual Introduction to Active Inference
+                    </h3>
+                    <p className="text-slate-600 dark:text-slate-400 mb-3">
+                      An introduction to programming active inference agents in
+                      python with the pymdp package. Explore the concepts
+                      visually and interactively.
+                    </p>
+                    <a
+                      href="https://skoghoern.github.io/notebooks/visual-intro_active-inference.html" // Updated link
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                    >
+                      View Marimo Notebook
+                    </a>
+                  </div>
+
+                  {/* Project Example 2: Active Inference GIF */}
+                  <div className="mb-6 p-4 border border-slate-200 dark:border-slate-700 rounded-md bg-slate-50 dark:bg-slate-800/50">
+                    <h3 className="text-lg font-semibold mb-2 text-slate-700 dark:text-slate-300">
+                      Active Inference Loop
+                    </h3>
+                    <p className="text-slate-600 dark:text-slate-400 mb-3">
+                      A brief visual explanation of the active inference
+                      concept.
+                    </p>
+                    <div className="flex justify-center my-4">
+                      <Image
+                        src="/profile/ActiveInferenceLoop.gif" // Assumes GIF is in public/profile
+                        alt="Active Inference Loop GIF"
+                        width={300} // Base width
+                        height={200} // Base height
+                        unoptimized={true} // Important for GIFs in Next.js Image component
+                        className="rounded w-64 h-auto md:w-80 lg:w-96" // Responsive width classes, auto height
+                      />
+                    </div>
                   </div>
                 </div>
               </section>
