@@ -83,8 +83,8 @@ export default function Home() {
                     More About Me
                   </h3>
                   <p className="text-slate-600 dark:text-slate-300">
-                    My core passion lies at the intersection of the brain,
-                    mathematics, and code. I&apos;m deeply curious about
+                    My core passion lies at the intersection of neuroscience,
+                    mathematics, and algorithms. I&apos;m deeply curious about
                     unraveling the mathematical principles that govern how our
                     minds work. My goal is not just theoretical understanding,
                     but also translating these principles into tangible code,
@@ -117,6 +117,29 @@ export default function Home() {
                   {/* Paper 1 */}
                   <div className="mb-6 p-4 border border-slate-200 dark:border-slate-700 rounded-md bg-slate-50 dark:bg-slate-800/50">
                     <h4 className="text-lg font-semibold mb-2 text-slate-700 dark:text-slate-300">
+                      iPSC-modelling reveals genetic associations and
+                      morphological alterations of oligodendrocytes in
+                      schizophrenia
+                    </h4>
+                    <p className="text-slate-600 dark:text-slate-400">
+                      Shared First Author. Focus on Statistics and Stem Cell
+                      lab. Published in{" "}
+                      <span className="italic">Translational Psychiatry</span>{" "}
+                      (August, 2025). {/* Adjusted date format */}
+                    </p>
+                    <a
+                      href="https://www.nature.com/articles/s41398-025-03509-x"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                    >
+                      View Publication
+                    </a>
+                  </div>
+
+                  {/* Paper 2 */}
+                  <div className="mb-6 p-4 border border-slate-200 dark:border-slate-700 rounded-md bg-slate-50 dark:bg-slate-800/50">
+                    <h4 className="text-lg font-semibold mb-2 text-slate-700 dark:text-slate-300">
                       Expression of Lineage Transcription Factors Identifies
                       Differences in Transition States of Induced Human
                       Oligodendrocyte Differentiation
@@ -141,20 +164,6 @@ export default function Home() {
                     >
                       View Publication
                     </a>
-                  </div>
-                  {/* Paper 2 */}
-                  <div className="mb-6 p-4 border border-slate-200 dark:border-slate-700 rounded-md bg-slate-50 dark:bg-slate-800/50">
-                    <h4 className="text-lg font-semibold mb-2 text-slate-700 dark:text-slate-300">
-                      iPSC-modelling reveals genetic associations and
-                      morphological alterations of oligodendrocytes in
-                      schizophrenia
-                    </h4>
-                    <p className="text-slate-600 dark:text-slate-400">
-                      Accepted by{" "}
-                      <span className="italic">Translational Psychiatry</span>{" "}
-                      (April 23, 2025). {/* Adjusted date format */}
-                    </p>
-                    {/* No link yet as it's accepted but not published */}
                   </div>
                 </div>
 
