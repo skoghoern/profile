@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { Github, Linkedin } from "lucide-react"; // Removed Twitter import for now
 import { useState } from "react"; // Import useState
-import GoogleScholar from "../../public/GoogleScholar";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<"about" | "projects">("about"); // State for active tab
