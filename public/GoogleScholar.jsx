@@ -1,4 +1,6 @@
 import React from "react";
+const GOOGLE_SCHOLAR_PATH =
+  "M24 9.5L12 0 0 9.5l12 9.5 12-9.5zm-12 1.9l-7.7-6 7.7-6 7.7 6-7.7 6zm0 1.9l-7.7 6 7.7 6 7.7-6-7.7-6z";
 
 // The component will accept 'size' and any other props (like className)
 const GoogleScholar = ({ size = 24, ...props }) => (
@@ -12,7 +14,7 @@ const GoogleScholar = ({ size = 24, ...props }) => (
     {...props}
   >
     <title>Google Scholar icon</title>
-    <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z" />
+    <path d={GOOGLE_SCHOLAR_PATH} />
   </svg>
 );
 

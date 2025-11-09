@@ -280,7 +280,7 @@ export default function Home() {
                 <Github size={30} />
               </a>
               <a
-                href="scholar.google.com/citations?user=oU6X40cAAAAJ"
+                href="https://scholar.google.com/citations?user=oU6X40cAAAAJ"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Google Scholar Profile"
