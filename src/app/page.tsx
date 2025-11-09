@@ -286,7 +286,7 @@ export default function Home() {
                 className="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110"
               >
                 <Image
-                  src="../../public/google-scholar.png"
+                  src="/profile/google-scholar.png"
                   alt="Google Scholar Logo"
                   width={30}
                   height={30}
