@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Github, Linkedin } from "lucide-react"; // Removed Twitter import for now
 import { useState } from "react"; // Import useState
+import GoogleScholar from "../../public/GoogleScholar";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<"about" | "projects">("about"); // State for active tab
@@ -109,7 +110,7 @@ export default function Home() {
                   Here&apos;s an overview of some things I&apos;ve worked on.
                 </p>
 
-                {/* Publications Section - MOVED HERE */}
+                {/* Publications Section */}
                 <div className="mb-8 pt-6 border-t border-slate-200 dark:border-slate-700">
                   <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-slate-200 text-center">
                     Publications
@@ -172,6 +173,27 @@ export default function Home() {
                   <h3 className="text-xl font-semibold mb-4 text-slate-800 dark:text-slate-200 text-center">
                     Other Projects
                   </h3>
+                  {/* PAPER: The Discovery Engine */}
+                  <div className="mb-6 p-4 border border-slate-200 dark:border-slate-700 rounded-md bg-slate-50 dark:bg-slate-800/50">
+                    <h4 className="text-lg font-semibold mb-2 text-slate-700 dark:text-slate-300">
+                      The Discovery Engine: A Framework for AI-Driven Synthesis
+                      and Navigation of Scientific Knowledge Landscapes
+                    </h4>
+                    <p className="text-slate-600 dark:text-slate-400">
+                      Focus on **LLM-driven distillation** of scientific
+                      literature into a computational **Conceptual Tensor**.
+                      Submitted to <span className="italic">arXiv</span> (May,
+                      2025).
+                    </p>
+                    <a
+                      href="https://arxiv.org/pdf/2505.17500"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                    >
+                      View PDF on arXiv
+                    </a>
+                  </div>
                   {/* Project Example: Psychotherapy App */}
                   <div className="mb-6 p-4 border border-slate-200 dark:border-slate-700 rounded-md bg-slate-50 dark:bg-slate-800/50">
                     <h3 className="text-lg font-semibold mb-2 text-slate-700 dark:text-slate-300">
@@ -256,6 +278,15 @@ export default function Home() {
                 className="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110"
               >
                 <Github size={30} />
+              </a>
+              <a
+                href="scholar.google.com/citations?user=oU6X40cAAAAJ"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Google Scholar Profile"
+                className="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110"
+              >
+                <GoogleScholar size={30} />
               </a>
               <a
                 href="https://www.linkedin.com/in/benedikt-waldeck-604ab02b2"
