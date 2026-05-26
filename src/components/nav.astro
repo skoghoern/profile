@@ -238,6 +238,35 @@ const navItems: NavItem[] = [
   const maxScroll = 1000;
   let lastScrollY = window.scrollY;
   let rafId: number | null = null;
+  let navMinWidth = 0;
+  let navMaxWidth = 0;
+
+  /** Measure expanded vs compact widths from actual nav content (desktop only). */
+  function measureNavWidths() {
+    if (!nav || window.innerWidth < 768) {
+      navMinWidth = 0;
+      navMaxWidth = 0;
+      return;
+    }
+
+    const savedWidth = nav.style.width;
+    const wasScrolling = nav.classList.contains("scrolling");
+
+    nav.style.width = "80%";
+    nav.classList.remove("scrolling");
+    navMaxWidth = nav.offsetWidth;
+
+    nav.classList.add("scrolling");
+    nav.style.width = "max-content";
+    navMinWidth = nav.scrollWidth;
+
+    nav.style.width = savedWidth;
+    if (!wasScrolling) nav.classList.remove("scrolling");
+    else nav.classList.add("scrolling");
+
+    // Never shrink below content; expanded state is at least as wide as compact
+    navMaxWidth = Math.max(navMaxWidth, navMinWidth);
+  }
 
   function updateNav() {
     const currentScrollY = window.scrollY;
@@ -248,16 +277,15 @@ const navItems: NavItem[] = [
       const scrollProgress = Math.min(window.scrollY / maxScroll, 1);
       const easeProgress = 1 - Math.pow(1 - scrollProgress, 4);
 
-      const minWidth = 620;
-      const maxWidth = window.innerWidth * 0.8;
-      const currentWidth = maxWidth - (maxWidth - minWidth) * easeProgress;
+      const currentWidth =
+        navMaxWidth - (navMaxWidth - navMinWidth) * easeProgress;
 
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 768 && navMinWidth > 0) {
         nav?.style.setProperty("width", `${currentWidth}px`);
       }
     } else {
       nav?.classList.remove("scrolling");
-      // nav?.style.setProperty("width", "80%");
+      nav?.style.removeProperty("width");
     }
     if (window.innerWidth < 768) {
       // Small buffer (e.g. 10px) to prevent accidental hiding on "jittery" scrolls
@@ -285,6 +313,38 @@ const navItems: NavItem[] = [
     },
     { passive: true }
   );
+
+  window.addEventListener("resize", () => {
+    measureNavWidths();
+    updateNav();
+  });
+
+  function initNavWidthTracking() {
+    measureNavWidths();
+    updateNav();
+
+    const ul = nav?.querySelector("ul");
+    if (ul && "ResizeObserver" in window) {
+      const ro = new ResizeObserver(() => {
+        measureNavWidths();
+        updateNav();
+      });
+      ro.observe(ul);
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initNavWidthTracking);
+  } else {
+    initNavWidthTracking();
+  }
+
+  if (document.fonts?.ready) {
+    document.fonts.ready.then(() => {
+      measureNavWidths();
+      updateNav();
+    });
+  }
 
   //smooth scrolling to a linked section
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
