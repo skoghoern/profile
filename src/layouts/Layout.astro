@@ -23,13 +23,40 @@ const defaultTheme = `${baseTheme}-dark`;
 
     <!-- THEME TOGGLE SCRIPT -->
     <script is:inline define:vars={{ baseTheme, defaultTheme }}>
-      const savedTheme = localStorage.getItem('theme');
+      const getSavedTheme = () => {
+        try {
+          return localStorage.getItem('theme');
+        } catch {
+          return null;
+        }
+      };
 
-      if (savedTheme && savedTheme.startsWith(baseTheme)) {
+      const savedTheme = getSavedTheme();
+      const hasUserPreference = !!(savedTheme && savedTheme.startsWith(baseTheme));
+
+      const applyTheme = (isDark) => {
+        const systemTheme = isDark ? `${baseTheme}-dark` : `${baseTheme}-light`;
+        document.documentElement.setAttribute('data-theme', systemTheme || defaultTheme);
+      };
+
+      if (hasUserPreference) {
         document.documentElement.setAttribute('data-theme', savedTheme);
       } else {
-        document.documentElement.setAttribute('data-theme', defaultTheme);
-        localStorage.setItem('theme', defaultTheme);
+        // No saved user theme: follow the OS/browser color scheme.
+        const mediaQuery = window.matchMedia?.('(prefers-color-scheme: dark)');
+        const prefersDark = mediaQuery?.matches ?? null;
+
+        applyTheme(prefersDark ?? defaultTheme.endsWith('-dark'));
+
+        // Keep in sync with system changes while the user hasn't explicitly chosen a theme.
+        if (mediaQuery) {
+          const onChange = (e) => applyTheme(e.matches);
+          if (typeof mediaQuery.addEventListener === 'function') {
+            mediaQuery.addEventListener('change', onChange);
+          } else if (typeof mediaQuery.addListener === 'function') {
+            mediaQuery.addListener(onChange);
+          }
+        }
       }
     </script>
 

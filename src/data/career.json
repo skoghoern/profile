@@ -1,10 +1,82 @@
 [
   {
-    "company": "Medicine, Neurobiology & Cognitive Science",
-    "role": "Research Background",
-    "period": "Ongoing",
+    "company": "Ludwig-Maximilians-University (LMU), Laboratory for Neurobiology",
+    "role": "Doctorate in Medicine (MD) – Oligodendroglial Disorders in Schizophrenia",
+    "period": "07/2020 – 04/2026 · Munich, Germany",
     "type": "Education",
-    "description": "Background spanning medicine, neurobiology, and cognitive science, with a focus on the mathematical principles underlying intelligence and mind.",
-    "skills": ["Neuroscience", "Medicine", "Cognitive Science"]
+    "description": "Summa cum laude MD thesis on oligodendroglial disorders in schizophrenia, including development of a novel image-based cell recognition workflow and primary responsibility for statistical analysis; published in top-tier journals such as Translational Psychiatry and Cells.",
+    "skills": [
+      "Neurobiology",
+      "Image Analysis",
+      "Statistics",
+      "Scientific Writing"
+    ]
+  },
+  {
+    "company": "Ludwig-Maximilians-University (LMU)",
+    "role": "Medical School – Focus on Neurology & Psychotherapy",
+    "period": "10/2016 – 11/2023 · Munich, Germany",
+    "type": "Education",
+    "description": "Completed medical school with focus on neurology and psychotherapy and received long-term scholarships from LMU (FöFoLe) and others.",
+    "skills": [
+      "Clinical Medicine",
+      "Neurology",
+      "Psychotherapy",
+      "Scholarships"
+    ]
+  },
+  {
+    "company": "University of Tübingen",
+    "role": "B.Sc. Studies in Cognitive Science",
+    "period": "10/2015 – 09/2016 · Tübingen, Germany",
+    "type": "Education",
+    "description": "Introductory studies in cognitive science with a strong quantitative foundation in mathematics, informatics, statistics, and psychology.",
+    "skills": ["Cognitive Science", "Mathematics", "Statistics", "Psychology"]
+  },
+  {
+    "company": "Active Inference Institute",
+    "role": "Intern – Active Inference & Probabilistic Programming",
+    "period": "12/2024 – 12/2025 · Remote / Bologna, Italy",
+    "type": "Internship",
+    "description": "Worked on reactive (variational) message-passing algorithms in open-source Julia ecosystems (RxInfer.jl, GraphPPL.jl, ReactiveMP.jl), self-studied Bayesian machine learning, and created tutorials on inference-as-planning and parameter learning; contributed to an automatic research discovery project combining LLMs with active inference.",
+    "skills": [
+      "Active Inference",
+      "Bayesian Machine Learning",
+      "Julia",
+      "Probabilistic Programming"
+    ]
+  },
+  {
+    "company": "Top-ranked hospitals in Germany, Denmark, Italy & Tanzania",
+    "role": "Clinical Electives – Psychiatry, Internal Medicine, Surgery, General Medicine",
+    "period": "2020 – 2023 · Multiple locations",
+    "type": "Clinical",
+    "description": "Completed 16 months of clinical electives across psychiatry, internal medicine, surgery, and general medicine in several leading international hospitals.",
+    "skills": [
+      "Clinical Psychiatry",
+      "Internal Medicine",
+      "Surgery",
+      "Intercultural Collaboration"
+    ]
+  },
+  {
+    "company": "Nanjing Medical University",
+    "role": "Research Stay – Neurobiology",
+    "period": "09/2019 · Nanjing, China",
+    "type": "Research",
+    "description": "Short-term research stay in neurobiology, broadening international research experience and exposure to different scientific environments.",
+    "skills": [
+      "Neurobiology",
+      "International Collaboration",
+      "Laboratory Research"
+    ]
+  },
+  {
+    "company": "LMU – Office of the Dean of Research of Medicine",
+    "role": "Student Assistant – Public Relations & Analytics",
+    "period": "01/2018 – 09/2019 · Munich, Germany",
+    "type": "Work",
+    "description": "Developed a Python-based automation pipeline that increased the number of published research articles by approximately 50%, supporting communication and visibility of medical research.",
+    "skills": ["Python", "Automation", "Data Analysis", "Science Communication"]
   }
 ]

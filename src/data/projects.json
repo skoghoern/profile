@@ -1,8 +1,26 @@
 [
   {
+    "title": "T-Maze Active Inference Tutorial (RxInfer)",
+    "description": "Contributed tutorial to the RxInfer examples site, teaching Active Inference implementation via message passing on factor graphs in a T-maze environment.",
+    "images": ["tmaze_agent.gif"],
+    "tech": ["Julia", "RxInfer", "Active Inference"],
+    "platforms": ["web"],
+    "link": "https://examples.rxinfer.com/categories/basic_examples/t-maze_active_inference/",
+    "category": "Education"
+  },
+  {
+    "title": "Free Energy in a Circumplex Model of Emotion",
+    "description": "Julia/RxInfer implementation of an active-inference agent exploring a 13-room environment while tracking valence and arousal on the emotion circumplex.",
+    "images": ["CircumplexModelEmotion.gif"],
+    "tech": ["Julia", "RxInfer", "Active Inference"],
+    "platforms": ["web"],
+    "link": "https://github.com/skoghoern/ArousalValencePOMDP",
+    "category": "Research"
+  },
+  {
     "title": "Interactive ML Overview - digital textbook",
     "description": "Created during my internship at the Active Inference Institute. A high-level, interactive guide providing an overview of the machine learning landscape.",
-    "images": [],
+    "images": ["ML_overview.png"],
     "tech": ["Python", "Interactive Web", "ML"],
     "platforms": ["web"],
     "link": "https://skoghoern.github.io/ML-overview/",
@@ -11,7 +29,7 @@
   {
     "title": "The Discovery Engine: AI-Driven Synthesis of Scientific Knowledge Landscapes",
     "description": "LLM-driven distillation of scientific literature into a computational Conceptual Tensor. Submitted to arXiv (May 2025).",
-    "images": [],
+    "images": ["visual_abstract_discovery_engine.png"],
     "tech": ["LLMs", "Python", "Knowledge Graphs"],
     "platforms": ["web"],
     "link": "https://arxiv.org/pdf/2505.17500",
@@ -20,7 +38,7 @@
   {
     "title": "Psychotherapy Support App (Mindly)",
     "description": "A web application helping users understand and manage emotions and thoughts using the ABC model from Cognitive Behavioral Therapy (CBT).",
-    "images": [],
+    "images": ["mindly.png"],
     "tech": ["Web App", "CBT", "Firebase"],
     "platforms": ["web"],
     "link": "https://mindly-mindly.web.app/",
@@ -29,7 +47,7 @@
   {
     "title": "Visual Introduction to Active Inference",
     "description": "An introduction to programming active inference agents in Python with the pymdp package—visual and interactive.",
-    "images": [],
+    "images": ["active_inf_loop.png"],
     "tech": ["Python", "pymdp", "Active Inference"],
     "platforms": ["web"],
     "link": "https://skoghoern.github.io/notebooks/visual-intro_active-inference.html",

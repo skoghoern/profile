@@ -10,8 +10,13 @@ type ProjectImage =
 
 const resolvedImages: ProjectImage[] = [];
 for (const imgName of project.images) {
-  if (imgName.toLowerCase().endsWith('.gif')) {
-    resolvedImages.push({ kind: 'public', src: `${import.meta.env.BASE_URL}${imgName}` });
+  const isPublicPath = imgName.startsWith('/');
+  const isAbsoluteUrl = /^https?:\/\//i.test(imgName);
+  const isPublicAsset = imgName.toLowerCase().endsWith('.gif') || isPublicPath || isAbsoluteUrl;
+
+  if (isPublicAsset) {
+    const publicSrc = isAbsoluteUrl ? imgName : `${import.meta.env.BASE_URL}${imgName}`;
+    resolvedImages.push({ kind: 'public', src: publicSrc });
     continue;
   }
   const meta = await resolveAssetImage(imgName);

@@ -4,7 +4,11 @@
       "title": "Neuroscience & Cognition",
       "skills": [
         { "name": "Neuroscience", "level": 3, "icon": "mdi:brain" },
-        { "name": "Cognitive Science", "level": 3, "icon": "mdi:head-lightbulb" },
+        {
+          "name": "Cognitive Science",
+          "level": 3,
+          "icon": "mdi:head-lightbulb"
+        },
         { "name": "Neurobiology", "level": 2, "icon": "mdi:microscope" },
         { "name": "iPSC Modelling", "level": 2, "icon": "mdi:flask" }
       ]
@@ -23,15 +27,11 @@
       "skills": [
         { "name": "Julia", "level": 2, "icon": "skill-icons:julia-dark" },
         { "name": "RxInfer.jl", "level": 2, "icon": "mdi:graph" },
-        { "name": "Bayesian Methods", "level": 2, "icon": "mdi:calculator-variant" }
-      ]
-    },
-    {
-      "title": "Tools & Web",
-      "skills": [
-        { "name": "Astro", "level": 2, "icon": "skill-icons:astro" },
-        { "name": "TypeScript", "level": 2, "icon": "skill-icons:typescript" },
-        { "name": "Git", "level": 3, "icon": "skill-icons:git" }
+        {
+          "name": "Bayesian Methods",
+          "level": 2,
+          "icon": "mdi:calculator-variant"
+        }
       ]
     }
   ]

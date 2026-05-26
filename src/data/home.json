@@ -1,8 +1,8 @@
 {
   "name": "Ben",
   "photoUrl": "profile.jpg",
-  "intro": "Hi, I'm Ben! My goal is to understand intelligence, cognition and the mind. My core passion lies at the intersection of neuroscience, mathematics, and algorithms. I'm deeply curious about unraveling the mathematical principles that govern how our minds work—translating them into tangible code to simulate aspects of human cognition. My background spans medicine, neurobiology, and cognitive science, complemented by a keen interest in mathematics and psychology.",
-  "introHtml": "Hi, I'm Ben! My goal is to understand <span class='text-white font-bold'>intelligence</span>, <span class='text-white font-bold'>cognition</span> and the <span class='text-white font-bold'>mind</span>. My core passion lies at the intersection of neuroscience, mathematics, and algorithms—translating principles of cognition into <span class='text-white font-bold'>code</span>.",
+  "intro": "My goal is to understand human behavior, cognition and mind. My core passion lies at the intersection of neuroscience, mathematics, and algorithms. I'm deeply curious about unraveling the mathematical principles that govern how our minds work—translating them into tangible code to simulate aspects of human cognition. My background spans medicine, neurobiology, and cognitive science, complemented by a keen interest in mathematics and psychology.",
+  "introHtml": "My goal is to understand <span class='text-maintext font-bold'>human behavior</span>, <span class='text-maintext font-bold'>cognition</span> and <span class='text-maintext font-bold'>mind</span>. My core passion lies at the intersection of neuroscience, mathematics, and algorithms—translating principles of cognition into <span class='text-maintext font-bold'>code</span>.",
   "webpageTitle": "Ben - Profile",
   "resumeUrl": "#",
   "socials": [
