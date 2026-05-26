@@ -1,20 +1,47 @@
 [
   {
-    "title": "Awesome Website",
-    "description": "A high-performance, SEO-optimized web application built with modern frameworks to showcase technical expertise.",
-    "images": ["astro-01.webp", "astro-02.jpeg"],
-    "tech": ["Astro", "Tailwind"],
+    "title": "Interactive ML Overview - digital textbook",
+    "description": "Created during my internship at the Active Inference Institute. A high-level, interactive guide providing an overview of the machine learning landscape.",
+    "images": [],
+    "tech": ["Python", "Interactive Web", "ML"],
     "platforms": ["web"],
-    "link": "https://astro.build/themes/details/career-portfolio-data-driven-astro-ssg/",
-    "category": "Published Website"
+    "link": "https://skoghoern.github.io/ML-overview/",
+    "category": "Research"
   },
   {
-    "title": "Demo Mobile App",
-    "description": "A high-performance mobile application built with modern frameworks to showcase technical expertise.",
-    "images": ["astro-02.jpeg", "#"],
-    "tech": ["Flutter", "Dart", "REST API"],
-    "platforms": ["apple-ios", "android"],
-    "link": "https://github.com/nbakh16/career-portfolio-template",
-    "category": "Hobby"
+    "title": "The Discovery Engine: AI-Driven Synthesis of Scientific Knowledge Landscapes",
+    "description": "LLM-driven distillation of scientific literature into a computational Conceptual Tensor. Submitted to arXiv (May 2025).",
+    "images": [],
+    "tech": ["LLMs", "Python", "Knowledge Graphs"],
+    "platforms": ["web"],
+    "link": "https://arxiv.org/pdf/2505.17500",
+    "category": "Preprint"
+  },
+  {
+    "title": "Psychotherapy Support App (Mindly)",
+    "description": "A web application helping users understand and manage emotions and thoughts using the ABC model from Cognitive Behavioral Therapy (CBT).",
+    "images": [],
+    "tech": ["Web App", "CBT", "Firebase"],
+    "platforms": ["web"],
+    "link": "https://mindly-mindly.web.app/",
+    "category": "Application"
+  },
+  {
+    "title": "Visual Introduction to Active Inference",
+    "description": "An introduction to programming active inference agents in Python with the pymdp package—visual and interactive.",
+    "images": [],
+    "tech": ["Python", "pymdp", "Active Inference"],
+    "platforms": ["web"],
+    "link": "https://skoghoern.github.io/notebooks/visual-intro_active-inference.html",
+    "category": "Education"
+  },
+  {
+    "title": "Active Inference Loop",
+    "description": "A brief visual explanation of the active inference concept.",
+    "images": ["ActiveInferenceLoop.gif"],
+    "tech": ["Active Inference", "Visualization"],
+    "platforms": ["web"],
+    "link": "#",
+    "category": "Visualization"
   }
 ]

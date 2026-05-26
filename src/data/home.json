@@ -1,71 +1,33 @@
 {
-  "name": "John Doe",
+  "name": "Ben",
   "photoUrl": "favicon.svg",
-  "intro": "A brief, compelling introduction about who you are and what you do. Mention your core philosophy, your passion for building digital products, and your drive for creating efficient, high-impact solutions.",
-  "introHtml": "A brief, compelling introduction about who you are and what you do. Mention your core <span class='text-white font-bold'>philosophy</span>, your passion for building digital products, and your drive for creating <span class='text-white font-bold'>efficient</span>, <span class='text-white font-bold'>high-impact</span> solutions.",
-  "webpageTitle": "John Doe",
-  "resumeUrl": "https://example-files.online-convert.com/document/pdf/example.pdf",
-
-  "_comment": "Add your social links below. Leave the 'url' empty to hide the icon. Set 'showInContact' to true or false to control if it appears in the Contact section.",
+  "intro": "Hi, I'm Ben! My goal is to understand intelligence, cognition and the mind. My core passion lies at the intersection of neuroscience, mathematics, and algorithms. I'm deeply curious about unraveling the mathematical principles that govern how our minds work—translating them into tangible code to simulate aspects of human cognition. My background spans medicine, neurobiology, and cognitive science, complemented by a keen interest in mathematics and psychology.",
+  "introHtml": "Hi, I'm Ben! My goal is to understand <span class='text-white font-bold'>intelligence</span>, <span class='text-white font-bold'>cognition</span> and the <span class='text-white font-bold'>mind</span>. My core passion lies at the intersection of neuroscience, mathematics, and algorithms—translating principles of cognition into <span class='text-white font-bold'>code</span>.",
+  "webpageTitle": "Ben - Profile",
+  "resumeUrl": "#",
   "socials": [
     {
       "name": "GitHub",
-      "url": "https://github.com/[YOUR_USER_NAME]",
+      "url": "https://github.com/skoghoern",
       "icon": "mdi:github",
       "showInContact": true
     },
     {
       "name": "LinkedIn",
-      "url": "https://linkedin.com/in/[YOUR_USER_NAME]",
+      "url": "https://www.linkedin.com/in/benedikt-waldeck-604ab02b2",
       "icon": "mdi:linkedin",
       "showInContact": true
     },
     {
-      "name": "Leetcode",
-      "url": "#",
-      "icon": "devicon-plain:leetcode",
-      "showInContact": false
-    },
-    {
-      "name": "Behance",
-      "url": "#",
-      "icon": "devicon-plain:behance",
-      "showInContact": false
+      "name": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=oU6X40cAAAAJ",
+      "icon": "mdi:school",
+      "showInContact": true
     },
     {
       "name": "Email",
-      "url": "mailto:your-mail@example.com",
+      "url": "#",
       "icon": "mdi:email",
-      "showInContact": true
-    },
-    {
-      "name": "Whatsapp",
-      "url": "https://wa.me/[YOUR_WHATSAPP_NUMBER]",
-      "icon": "mdi:whatsapp",
-      "showInContact": true
-    },
-    {
-      "name": "Facebook",
-      "url": "#",
-      "icon": "mdi:facebook",
-      "showInContact": false
-    },
-    {
-      "name": "Messenger",
-      "url": "#",
-      "icon": "mdi:facebook-messenger",
-      "showInContact": true
-    },
-    {
-      "name": "Instagram",
-      "url": "#",
-      "icon": "mdi:instagram",
-      "showInContact": false
-    },
-    {
-      "name": "Twitter",
-      "url": "#",
-      "icon": "mdi:twitter",
       "showInContact": false
     }
   ]

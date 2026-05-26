@@ -1,0 +1,71 @@
+---
+import PublicationCard from './publication-card.astro';
+import publicationsData from '../data/publications.json';
+---
+
+<section id="publications" class="section-container overflow-hidden">
+  <div class="container mx-auto">
+    <div class="mb-12 publications-header">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-maintext mb-2 flex items-center gap-4">
+        <span class="text-accent">/</span> Publications
+      </h2>
+      <p class="text-subtext font-body text-sm max-w-md">
+        Peer-reviewed research on oligodendrocyte biology, stem-cell modelling, and psychiatric genetics.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl">
+      {publicationsData.map((item) => (
+        <PublicationCard item={item} />
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .publications-header {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .publication-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .publications-header.reveal,
+  .publication-card.reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  const initPublicationsReveal = () => {
+    const header = document.querySelector('.publications-header');
+    const cards = document.querySelectorAll('.publication-card');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -10px 0px' }
+    );
+
+    if (header) observer.observe(header);
+    cards.forEach((card, index) => {
+      (card as HTMLElement).style.transitionDelay = `${index * 100}ms`;
+      observer.observe(card);
+    });
+  };
+
+  window.addEventListener('load', initPublicationsReveal);
+  document.addEventListener('astro:after-swap', initPublicationsReveal);
+</script>

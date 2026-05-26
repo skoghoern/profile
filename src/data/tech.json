@@ -1,35 +1,37 @@
 {
   "categories": [
     {
-      "title": "Mobile Development",
+      "title": "Neuroscience & Cognition",
       "skills": [
-        { "name": "Flutter", "level": 3, "icon": "skill-icons:flutter-dark" },
-        { "name": "Dart", "level": 3, "icon": "skill-icons:dart-dark" },
-        { "name": "Kotlin", "level": 1, "icon": "skill-icons:kotlin-dark" }
+        { "name": "Neuroscience", "level": 3, "icon": "mdi:brain" },
+        { "name": "Cognitive Science", "level": 3, "icon": "mdi:head-lightbulb" },
+        { "name": "Neurobiology", "level": 2, "icon": "mdi:microscope" },
+        { "name": "iPSC Modelling", "level": 2, "icon": "mdi:flask" }
       ]
     },
     {
-      "title": "Frontend",
+      "title": "Machine Learning & Inference",
+      "skills": [
+        { "name": "Python", "level": 3, "icon": "skill-icons:python-dark" },
+        { "name": "Active Inference", "level": 3, "icon": "mdi:loop" },
+        { "name": "pymdp", "level": 2, "icon": "mdi:chart-bell-curve" },
+        { "name": "Statistics", "level": 3, "icon": "mdi:chart-scatter-plot" }
+      ]
+    },
+    {
+      "title": "Probabilistic Programming",
+      "skills": [
+        { "name": "Julia", "level": 2, "icon": "skill-icons:julia-dark" },
+        { "name": "RxInfer.jl", "level": 2, "icon": "mdi:graph" },
+        { "name": "Bayesian Methods", "level": 2, "icon": "mdi:calculator-variant" }
+      ]
+    },
+    {
+      "title": "Tools & Web",
       "skills": [
         { "name": "Astro", "level": 2, "icon": "skill-icons:astro" },
-        { "name": "HTML", "level": 2, "icon": "skill-icons:html" },
-        { "name": "CSS", "level": 2, "icon": "skill-icons:css" },
-        { "name": "Tailwind CSS", "level": 1, "icon": "skill-icons:tailwindcss-dark" }
-      ]
-    },
-    {
-      "title": "Backend",
-      "skills": [
-        { "name": "FastAPI", "level": 2, "icon": "skill-icons:fastapi" },
-        { "name": "Python", "level": 2, "icon": "skill-icons:python-dark" },
-        { "name": "Firebase", "level": 3, "icon": "vscode-icons:file-type-firebase" }
-      ]
-    },
-    {
-      "title": "Database",
-      "skills": [
-        { "name": "SQLite", "level": 3, "icon": "skill-icons:sqlite" },
-        { "name": "PostgreSQL", "level": 2, "icon": "skill-icons:postgresql-dark" }
+        { "name": "TypeScript", "level": 2, "icon": "skill-icons:typescript" },
+        { "name": "Git", "level": 3, "icon": "skill-icons:git" }
       ]
     }
   ]
