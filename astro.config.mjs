@@ -8,7 +8,7 @@ import icon from 'astro-icon';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://skoghoern.github.io',
-  base: '/profile/',
+  base: '/profile',
   vite: {
     plugins: [tailwindcss()]
   },

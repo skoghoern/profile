@@ -37,6 +37,16 @@ Make sure you have **Astro v6** and **Node.js** (v22.12.0 or higher) installed o
 7. Update your content in `/src/data/`
 8. Build and deploy on your preferred platform
 
+### GitHub Pages (this repo)
+
+Live site: [skoghoern.github.io/profile](https://skoghoern.github.io/profile/)
+
+1. In GitHub → **Settings → Pages**, set **Source** to **GitHub Actions**.
+2. Push to `master` — the deploy workflow builds and publishes automatically.
+3. `astro.config.mjs` uses `site: 'https://skoghoern.github.io'` and `base: '/profile'`.
+
+Add personal images to `src/assets/` (e.g. `profile.jpg`, `ActiveInferenceLoop.gif`) and set `photoUrl` in `src/data/home.json`.
+
 
 ## 🛠️ How to Customize
 To make this portfolio yours, simply edit the JSON files in `src/data/`.
