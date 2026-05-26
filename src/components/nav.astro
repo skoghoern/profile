@@ -361,30 +361,53 @@ const navItems: NavItem[] = [
     });
   });
 
-  //highlight section by observing visible one on the screen by 50%
-  document.addEventListener("DOMContentLoaded", () => {
+  // Highlight the section with the largest visible share (works for short and tall sections)
+  function initSectionHighlight() {
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll("nav a[href^='#']");
-    const observerOptions = { threshold: 0.5 };
+    const visibility = new Map<Element, number>();
 
-    const observerCallback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          navLinks.forEach((link) => link.classList.remove("active"));
-          const id = entry.target.getAttribute("id");
-          const activeLink = document.querySelector(`nav a[href="#${id}"]`);
-          if (activeLink) {
-            activeLink.classList.add("active");
-          }
+    const setActiveFromVisibility = () => {
+      let bestSection: Element | null = null;
+      let bestRatio = 0;
+
+      sections.forEach((section) => {
+        const ratio = visibility.get(section) ?? 0;
+        if (ratio > bestRatio) {
+          bestRatio = ratio;
+          bestSection = section;
         }
+      });
+
+      if (!bestSection || bestRatio === 0) return;
+
+      const id = bestSection.getAttribute("id");
+      navLinks.forEach((link) => {
+        link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
       });
     };
 
     const observer = new IntersectionObserver(
-      observerCallback,
-      observerOptions
+      (entries) => {
+        entries.forEach((entry) => {
+          visibility.set(entry.target, entry.intersectionRatio);
+        });
+        setActiveFromVisibility();
+      },
+      { threshold: Array.from({ length: 21 }, (_, i) => i / 20) }
     );
-    sections.forEach((section) => observer.observe(section));
-  });
+
+    sections.forEach((section) => {
+      visibility.set(section, 0);
+      observer.observe(section);
+    });
+    setActiveFromVisibility();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initSectionHighlight);
+  } else {
+    initSectionHighlight();
+  }
 </script>
 
