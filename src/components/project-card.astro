@@ -4,16 +4,21 @@ const { project } = Astro.props;
 import { Image } from 'astro:assets';
 import { resolveAssetImage } from '../utils/images';
 
-// Map through the array of image strings from project JSON
-const optimizedImages = await Promise.all(
-  project.images.map(async (imgName: string) => {
-    return await resolveAssetImage(imgName);
-  })
-);
+type ProjectImage =
+  | { kind: 'asset'; meta: Awaited<ReturnType<typeof resolveAssetImage>> }
+  | { kind: 'public'; src: string };
 
-const validImages = optimizedImages.filter(Boolean);
+const resolvedImages: ProjectImage[] = [];
+for (const imgName of project.images) {
+  if (imgName.toLowerCase().endsWith('.gif')) {
+    resolvedImages.push({ kind: 'public', src: `${import.meta.env.BASE_URL}${imgName}` });
+    continue;
+  }
+  const meta = await resolveAssetImage(imgName);
+  if (meta) resolvedImages.push({ kind: 'asset', meta });
+}
 
-const isSlider = validImages.length > 1;
+const isSlider = resolvedImages.length > 1;
 ---
 
 <div class="project-card group relative bg-accent/5 border border-accent/10 rounded-2xl overflow-hidden hover:border-accent/40 transition-all duration-500">
@@ -22,14 +27,23 @@ const isSlider = validImages.length > 1;
     
     <div class={`w-full h-full relative ${isSlider ? 'image-slider' : ''}`}>
       {
-        validImages.length > 0 ? (
-          validImages.map((imgMetadata, index) => (
-            <Image
-              src={imgMetadata}
-              alt={`${project.title}`}
-              class={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 ${index === 0 ? "opacity-100 z-0" : "opacity-0 z-[-1]"}`}
-            />
-          ))
+        resolvedImages.length > 0 ? (
+          resolvedImages.map((image, index) =>
+            image.kind === 'asset' ? (
+              <Image
+                src={image.meta!}
+                alt={`${project.title}`}
+                class={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 ${index === 0 ? "opacity-100 z-0" : "opacity-0 z-[-1]"}`}
+              />
+            ) : (
+              <img
+                src={image.src}
+                alt={`${project.title}`}
+                class={`absolute inset-0 w-full h-full object-contain transition-all duration-1000 group-hover:scale-110 ${index === 0 ? "opacity-100 z-0" : "opacity-0 z-[-1]"}`}
+                loading="lazy"
+              />
+            )
+          )
         ) : (
           /* Fallback box if array is empty or filenames are missing */
           <img
