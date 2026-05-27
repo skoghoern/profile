@@ -1,0 +1,37 @@
+{
+  "categories": [
+    {
+      "title": "(Computational) Neuroscience & Cognition",
+      "skills": [
+        { "name": "Neuroscience", "level": 3, "icon": "mdi:brain" },
+        {
+          "name": "Cognitive Science",
+          "level": 3,
+          "icon": "mdi:head-lightbulb"
+        },
+        { "name": "Active Inference", "level": 3, "icon": "mdi:loop" },
+        { "name": "Neurobiology", "level": 2, "icon": "mdi:microscope" }
+      ]
+    },
+    {
+      "title": "Programming",
+      "skills": [
+        { "name": "Julia", "level": 3, "icon": "skill-icons:julia-dark" },
+        { "name": "Python", "level": 2, "icon": "skill-icons:python-dark" },
+        { "name": "R", "level": 2, "icon": "skill-icons:r-light" }      ]
+    },
+    {
+      "title": "Probabilistic Programming",
+      "skills": [
+        {
+          "name": "Bayesian Statistics",
+          "level": 2,
+          "icon": "mdi:calculator-variant"
+        },
+        { "name": "Variational Inference", "level": 2, "icon": "mdi:chart-bell-curve-cumulative" },
+        { "name": "RxInfer.jl", "level": 2, "icon": "mdi:graph" }
+
+      ]
+    }
+  ]
+}
