@@ -56,7 +56,7 @@
   {
     "title": "Active Inference Loop",
     "description": "A brief visual explanation of the active inference concept.",
-    "images": ["ActiveInferenceLoop.gif"],
+    "images": ["/ActiveInferenceLoop.gif"],
     "tech": ["Active Inference", "Visualization"],
     "platforms": ["web"],
     "link": "#",
